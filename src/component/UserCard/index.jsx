@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { changeName } from "../../store/modules/user/actions";
 import {useState} from 'react';
+import './style.css';
 
 
 const UserCard = () => {
@@ -17,7 +18,7 @@ const UserCard = () => {
 
     return (
         <div>
-            <h3>Name: {name}</h3>
+            <span>Name: <strong>{name}</strong></span>
             <input type="text" placeholder="New Name:" onChange={e => setNewName(e.target.value)} value={newName}/>
             <button onClick={handleClick}>Change</button>
         </div>
